@@ -1,0 +1,119 @@
+{% extends "base0.html" %}
+
+
+{% block content %}
+
+
+<div class="section">
+    <form id="register-form" action="/register" method="POST">
+        <h1 style="color: #e60000;">REGISTER</h1>
+
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+                
+            {{ form.first_name.label(class="form-control-label") }}
+
+            {% if form.first_name.errors %}
+                {{ form.first_name(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.first_name.errors %}
+                        <span>{{ error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.first_name(class="form-control") }}
+            {% endif %}
+        </div>
+
+        <div class="form-group">  
+
+            {{ form.last_name.label(class="form-control-label") }}
+
+            {% if form.last_name.errors %}
+            {{ form.last_name(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.last_name.errors %}
+                    <span>{{ error}}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+                {{ form.last_name(class="form-control") }}
+            {% endif %}
+    
+        </div>
+        <div class="form-group">
+
+            {{ form.username.label(class="form-control-label") }}
+
+            {% if form.username.errors %}
+            {{ form.username(class ="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.username.errors %}
+                        <span>{{ error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.username(class="form-control") }}
+            {% endif %}
+                
+        </div>
+        <div class="form-group">
+
+            {{ form.email.label(class="form-control-label") }}
+
+            {% if form.email.errors %}
+            {{ form.email(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                        <span>{{ error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.email(class="form-control") }}
+            {% endif %}
+                
+        </div>
+        <div class="form-group">
+
+            {{ form.password.label(class="form-control-label") }}
+
+            {% if form.password.errors %}
+            {{ form.password(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                        <span>{{ error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.password(class="form-control") }}
+            {% endif %}
+    
+        </div>
+        <div class="form-group">  
+
+            {{ form.confirm_password.label(class="form-control-label") }}
+
+            {% if form.confirm_password.errors %}
+                {{ form.first_name(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.username.erros %}
+                        <span>{{ error}}</span>
+                    {% endfor %}
+                </div>
+
+            {% else %}
+                {{ form.confirm_password(class="form-control") }}
+            {% endif %}
+            
+        </div>
+        <div class="form-group" id="register-footer">
+            <div>
+                {{ form.submit(class="btn btn-secondary") }}
+            </div>
+            <div>
+                <a href="{{ url_for('login_page') }}" class="btn btn-primary" id="login_btn"style="color: black; margin:10px; background-color: #e60000; border-color: white;font: weight 3000px">Already a member? Log In</a>
+            </div>
+        </div> 
+    </form>
+</div>
+    {% endblock content %}

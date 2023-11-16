@@ -1,0 +1,49 @@
+<nav class="navbar sticky-top bg-body-tertiary">
+  <div class="container-fluid"></div>
+    <a class="navbar-brand" href="/index" style="color:red">Ani-Roll</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/likes">Your Likes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/messages">Messages</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/settings">Settings</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/cat_action">Action</a></li>
+              <li><a class="dropdown-item" href="/cat_comedy">Comedy</a></li>
+              <li><a class="dropdown-item" href="/cat_sci-fi">Sci-fi</a></li>
+              <li><a class="dropdown-item" href="/cat_horror">Horror</a></li>
+              <li><a class="dropdown-item" href="/cat_fantasy">Fantasy</a></li>
+              <li><a class="dropdown-item" href="/cat_mystery">Mystery</a></li>
+              <li><a class="dropdown-item" href="/cat_romance">Romanace</a></li>
+              <li><a class="dropdown-item" href="/cat_sliceOL">Slice of Life</a></li>
+            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out</a>
+          </li>  
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
